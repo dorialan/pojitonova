@@ -1,0 +1,42 @@
+body, input, button {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.321em;
+  color: #333;
+}
+
+a {
+  color: #1A3DC1;
+  text-decoration: none;
+}
+
+a:hover {
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+small {
+  font-size: 0.75em;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
