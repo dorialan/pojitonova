@@ -34,3 +34,19 @@ h1 {
   font-weight: bold;
 }
 
+.pums-pums {
+  width: 54px;
+  height: 40px;
+  background: url('../images/pums_pums.png');
+  position: absolute;
+  top: 3px;
+  right: -56px;
+}
+
+a .pums-pums {
+  display: none;
+}
+
+a:hover .pums-pums {
+  display: block;
+}
