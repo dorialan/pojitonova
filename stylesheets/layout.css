@@ -24,16 +24,20 @@ body {
 
 .header {
   padding: 15px 0;
-  background: #fff;
-  box-shadow: 0 2px 3px rgba(0,0,0,.1);
 }
 
-.header img {
+.logo {
   display: block;
+  background: url('../images/logo.png');
+  width: 133px;
+  height: 62px;
+  margin: 0 auto 50px auto;
 }
 
 .navigation {
   list-style: none;
+  width: 575px;
+  margin: 0 auto;
 }
 
 .navigation li {
@@ -104,7 +108,22 @@ body {
   border-bottom: 1px solid #666;
 }
 
-
 .footer ul li a:hover {
   color: #fff;
+}
+
+.photo {
+  width: 220px;
+  margin: 5px;
+  float: left;
+  max-width: 176px;
+  border: 3px solid #fff;
+}
+.photo:hover {
+  border: 3px solid #ff008a;
+}
+
+.photo img {
+  max-width: 100%;
+  display: block;
 }

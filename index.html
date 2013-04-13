@@ -6,20 +6,36 @@
   <link rel="stylesheet" href="stylesheets/application.css" />
   <link rel="icon" href="favicon.ico" />
   <link rel="shortcut icon" href="favicon.ico" />
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="javascripts/masonry.js"></script>
+  <script type="text/javascript">
+    $(function(){
+
+      var $container = $('#gallery');
+      $container.imagesLoaded(function(){
+        $container.masonry({
+          itemSelector : '.photo',
+        });
+      });
+    });
+  </script>
 </head>
 <body>
   <div class="wrapper">
     <div class="header">
-      <div class="inner row">
-        <div class="col1of5">
-          <div class="left mrs">
-            <img src="images/logo_small.png" alt="" />
-          </div>
-          <div class="left">
+      <div class="inner">
+        <div class="row mbm">
+          <div class="col1of5">
             <a href="#" class="testimonial-link">Отзывы клиентов</a>
           </div>
+          <div class="right">
+              <a href="http://www.flickr.com/photos/pojitonova/" target="_blank" class="flickr-link"></a>
+              <a href="https://www.facebook.com/pojitonova" target="_blank" class="facebook-link"></a>
+              <a href="http://vk.com/pojitonova" target="_blank" class="vk-link"></a>
+          </div>
         </div>
-        <div class="col3of5">
+        <a href="/" class="logo"></a>
+        <div class="row mbm">
           <ul class="navigation">
             <li><a href="">Портреты</a></li>
             <li><a href="">Дети</a></li>
@@ -29,17 +45,33 @@
             <li><a href="">Контактная иформация</a></li>
           </ul>
         </div>
-        <div class="col1of5">
-          <div class="right">
-            <a href="http://www.flickr.com/photos/pojitonova/" target="_blank" class="flickr-link"></a>
-            <a href="https://www.facebook.com/pojitonova" target="_blank" class="facebook-link"></a>
-            <a href="http://vk.com/pojitonova" target="_blank" class="vk-link"></a>
-          </div>
-        </div>
       </div>
     </div>
     <div class="body">
-
+      <div class="inner">
+        <div id="gallery" class="row">
+          <div class="photo"><a href="#"><img src="images/photos/001.jpg" alt="" /></a></div>
+          <div class="photo"><a href="#"><img src="images/photos/002.jpg" alt="" /></a></div>
+          <div class="photo"><a href="#"><img src="images/photos/003.jpg" alt="" /></a></div>
+          <div class="photo"><a href="#"><img src="images/photos/004.jpg" alt="" /></a></div>
+          <div class="photo"><a href="#"><img src="images/photos/005.jpg" alt="" /></a></div>
+          <div class="photo"><a href="#"><img src="images/photos/006.jpg" alt="" /></a></div>
+          <div class="photo"><a href="#"><img src="images/photos/007.jpg" alt="" /></a></div>
+          <div class="photo"><a href="#"><img src="images/photos/008.jpg" alt="" /></a></div>
+          <div class="photo"><a href="#"><img src="images/photos/009.jpg" alt="" /></a></div>
+          <div class="photo"><a href="#"><img src="images/photos/010.jpg" alt="" /></a></div>
+          <div class="photo"><a href="#"><img src="images/photos/011.jpg" alt="" /></a></div>
+          <div class="photo"><a href="#"><img src="images/photos/012.jpg" alt="" /></a></div>
+          <div class="photo"><a href="#"><img src="images/photos/013.jpg" alt="" /></a></div>
+          <div class="photo"><a href="#"><img src="images/photos/014.jpg" alt="" /></a></div>
+          <div class="photo"><a href="#"><img src="images/photos/015.jpg" alt="" /></a></div>
+          <div class="photo"><a href="#"><img src="images/photos/016.jpg" alt="" /></a></div>
+          <div class="photo"><a href="#"><img src="images/photos/017.jpg" alt="" /></a></div>
+          <div class="photo"><a href="#"><img src="images/photos/018.jpg" alt="" /></a></div>
+          <div class="photo"><a href="#"><img src="images/photos/019.jpg" alt="" /></a></div>
+          <div class="photo"><a href="#"><img src="images/photos/020.jpg" alt="" /></a></div>
+        </div>
+      </div>
     </div>
     <div class="push"></div>
   </div>
