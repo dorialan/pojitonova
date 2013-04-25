@@ -40,6 +40,11 @@
   border-bottom: 1px solid #bfbfbf;
   display: inline-block;
   height: 16px;
+  position: relative;
+}
+.contact-block .contacts a:hover {
+  color: #ff008a;
+  border-bottom: 1px solid #ff008a;
 }
 
 .accordion {
@@ -75,6 +80,11 @@
 }
 
 .accordion .content {
+  display: none;
   border-top: 1px solid #ddd;
   padding: 10px 10px 0 10px;
+}
+
+.accordion .item.current .content {
+  display: block;
 }

@@ -43,10 +43,28 @@ h1 {
   right: -56px;
 }
 
-a .pums-pums {
+.jmyak-jmyak {
+  width: 61px;
+  height: 34px;
+  background: url('../images/jmyak_jmyak.png');
+  position: absolute;
+  top: 5px;
+  right: -65px;
+}
+
+.tits-tits {
+  display: none;
+  left: -57px;
+  width: 55px;
+  height: 33px;
+  position: absolute;
+  background: url('../images/tits_tits.png');
+}
+
+a .pums-pums, a .jmyak-jmyak {
   display: none;
 }
 
-a:hover .pums-pums {
+a:hover .pums-pums, a:hover .jmyak-jmyak {
   display: block;
 }

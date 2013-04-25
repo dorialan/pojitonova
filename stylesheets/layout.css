@@ -18,7 +18,8 @@ body {
 }
 
 .inner {
-  width: 960px;
+  max-width: 960px;
+  padding: 0 20px;
   margin: 0 auto;
 }
 
@@ -32,6 +33,15 @@ body {
   width: 133px;
   height: 62px;
   margin: 0 auto 50px auto;
+}
+
+.social-links {
+  float: right;
+  position: relative;
+}
+
+.social-links:hover .tits-tits {
+  display: block;
 }
 
 .navigation {
@@ -55,6 +65,42 @@ body {
 .navigation li a:hover {
   color: #ff008a;
   border-bottom: none;
+}
+
+.mobile-navigation {
+  list-style: none;
+  padding-left: 30px;
+  background: url('../images/logo_small.png') no-repeat;
+}
+
+.mobile-navigation li {
+  padding: 5px 0;
+  display: none;
+}
+
+.mobile-navigation li.current, .mobile-navigation.expanded li {
+  display: block;
+}
+
+.mobile-navigation li a {
+  font-size: 16px;
+  color: #000;
+  text-decoration: underline;
+}
+
+.mobile-navigation li.current a {
+  text-decoration: none;
+  color: #ff008a;
+  padding-right: 10px;
+  background: url('../images/accordeon_arrow.png') no-repeat right -11px;
+}
+
+.mobile-navigation.expanded li.current a {
+  background-position: right 2px;
+}
+
+.mobile-navigation li a:hover {
+  color: #ff008a;
 }
 
 .flickr-link, .facebook-link, .vk-link {
