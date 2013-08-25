@@ -1,11 +1,18 @@
 var $checkScroll = true
-var $apiKey = '15c7ee8b682dbd8fa9fb3fce13dab3a0'
-var $perPage = 15
+var $apiKey = 'c0e13fd8d5032090750a6356925d6698'
+var $perPage = 100
 var $page = 0
 var $current_page = 1
 var $pages = 2
+var $photosets = ["72157634865788304", "72157634324909907", "72157634326612852", "72157634319585569"]
+var $photoset = "72157634865788304"
 
-$(document).ready(function(){				
+$(document).ready(function(){		
+  if (location.search) {
+      var parts = location.search.substring(1).split('?');
+      $photoset = parts[0];
+  } 
+  		
   getPhotoset();
 });
 
@@ -38,7 +45,7 @@ $(window).scroll(function () {
 });
 
 function getPhotoset() {
-  var fURL = "http://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key="+$apiKey+"&photoset_id=72157633574199906&per_page="+$perPage+"&page="+$current_page+"&media=photos&format=json&jsoncallback=?"
+  var fURL = "http://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key="+$apiKey+"&photoset_id="+$photoset+"&per_page="+$perPage+"&page="+$current_page+"&media=photos&format=json&jsoncallback=?"
 
   $.getJSON(fURL, displayImages);
 
@@ -57,12 +64,12 @@ function getPhotoset() {
         var sourceMedium = "http://farm"+ph.farm+".staticflickr.com/"+ph.server+"/"+ph.id+"_"+ph.secret+".jpg"      
         var sourceLarge = "http://farm"+ph.farm+".staticflickr.com/"+ph.server+"/"+ph.id+"_"+ph.secret+"_c.jpg"   
 
-        htmlString += '<div class="photo"><a href="' + sourceLarge + '" rel="lightbox[set]">';
+        htmlString += '<div class="photo photo-'+ $page +' style="display:none;"><a href="' + sourceLarge + '" rel="lightbox[set]">';
         htmlString += '<img src="' + sourceMedium + '" alt="' + ph.title + '" title="' + ph.title + '"/>';
         htmlString += '</a></div>';
       });        
     
-    $('#loading').hide();
+    
     $checkScroll = true;
   
     var $container = $('#gallery');
@@ -72,12 +79,16 @@ function getPhotoset() {
       $container.append($photos);
       
       $container.imagesLoaded(function(){
+        $('#loading').hide();
+        $('.photo-'+ $page).show();
         $container.masonry('appended', $photos);
       });
     } else {
       $container.append(htmlString);
 
       $container.imagesLoaded(function(){
+        $('#loading').hide();
+        $('.photo-'+ $page).show();
         $container.masonry({
           itemSelector : '.photo',
         });
