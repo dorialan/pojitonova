@@ -4,14 +4,11 @@
   <meta charset="UTF-8">
   <title>Фотограф Надежда Пожитонова</title>
   <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no" />
-  <link rel="stylesheet" href="stylesheets/application.css" />
-  <link rel="icon" href="favicon.ico" />
-  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="stylesheet" href="/stylesheets/application.css" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="shortcut icon" href="/favicon.ico" />
   <script src="/javascripts/jquery.1.8.2.min.js"></script>
-  <script src="/javascripts/masonry.js"></script>
-  <script src="/javascripts/lightbox.js"></script>
   <script src="/javascripts/application.js"></script>
-</head>
 <body>
   <div class="wrapper">
     <div class="header">
@@ -27,20 +24,18 @@
               <li class="photoset" id="72157634865788304"><a href="/?72157634865788304">Беремушки</a></li>
               <li class="photoset" id="72157635228082427"><a href="/?72157635228082427">Любовь</a></li>
               <li class="photoset" id="72157634324909907"><a href="/?72157634324909907">Мероприятия</a></li>
-              <li><a href="/contacts">Контактная иформация</a></li>
+              <li><a class="current" href="/contacts">Контактная иформация</a></li>
               <li><a href="/comments">Отзывы клиентов</a></li>
             </ul>
           </div>
-          <div class="social-links">
-            <span class="tits-tits"></span>
-            <a href = "http://www.flickr.com/photos/pojitonova/" target="_blank" class="flickr-link"></a>
-            <a href = "https://www.facebook.com/pojitonova" target="_blank" class="facebook-link"></a>
-            <a href = "http://vk.com/pojitonova" target="_blank" class="vk-link"></a>
-          </div>
 
+          <div class="social-links">
+              <a href="http://www.flickr.com/photos/pojitonova/" target="_blank" class="flickr-link"></a>
+              <a href="https://www.facebook.com/pojitonova" target="_blank" class="facebook-link"></a>
+              <a href="http://vk.com/pojitonova" target="_blank" class="vk-link"></a>
+          </div>
         </div>
         <a href="/" class="logo mobile-off"></a>
-        
         <div class="row mbl mobile-off">
           <ul class="navigation">
             <li class="photoset" id="72157634326612852"><a href="/?72157634326612852">Портрет</a></li>
@@ -48,27 +43,35 @@
             <li class="photoset" id="72157634865788304"><a href="/?72157634865788304">Беремушки</a></li>
             <li class="photoset" id="72157635228082427"><a href="/?72157635228082427">Любовь</a></li>
             <li class="photoset" id="72157634324909907"><a href="/?72157634324909907">Мероприятия</a></li>
-            <li><a href="/contacts">Контактная иформация</a></li>
+            
+            <li><a class="current" href="/contacts">Контактная иформация</a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="body">
       <div class="inner">
-        <center><div id="gallery" class="row"></center>
-          
+        <div class="contact-block row">
+          <div class="photographer">
+            <img src="/images/pojitonova.jpg" alt=""  />
+          </div>
+          <div class="contacts">
+            <p>Надежда Пожитонова<br />
+            +38 (096) 820-64-30<br />
+            <a href="mailto:pojitonova@gmail.com">pojitonova@gmail.com</a><br />
+            skype: <a href="skype:pojitonova?chat">pojitonova</a></p>
+            <p><a href="https://docs.google.com/spreadsheet/viewform?formkey=dG1keUcteWVnUXllX0Jic2cxNUl2UXc6MQ" target="_blank">Заказать фотосъемку<span class="jmyak-jmyak"></span></a></p>
+          </div>
         </div>
+        
       </div>
-      <div style="clear:both"></div>
-      <center id="loading"><img src="images/lightbox/loading.gif" /></center>
     </div>
     <div class="push"></div>
   </div>
-  <div style="clear:both"></div>
   <div class="footer">
     <div class="inner row">
       <div class="left">
-        <img src="images/brand_name.png" alt="" />
+        <img src="/images/brand_name.png" alt="" />
       </div>
       <div class="right">
         <ul class="">
@@ -79,7 +82,5 @@
       </div>
     </div>
   </div>
-  
-  
 </body>
 </html>

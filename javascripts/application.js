@@ -5,15 +5,19 @@ var $page = 0
 var $current_page = 1
 var $pages = 2
 var $photosets = ["72157634865788304", "72157634324909907", "72157634326612852", "72157634319585569"]
-var $photoset = "72157634865788304"
+var $photoset = "72157634326612852"
 
 $(document).ready(function(){		
   if (location.search) {
       var parts = location.search.substring(1).split('?');
       $photoset = parts[0];
   } 
-  		
-  getPhotoset();
+  
+  if ($("a.current").length == 0) {
+    $("li#" + $photoset + " a").addClass("current");
+    getPhotoset();
+  }
+  
 });
 
 $(function(){
@@ -45,7 +49,7 @@ $(window).scroll(function () {
 });
 
 function getPhotoset() {
-  var fURL = "http://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key="+$apiKey+"&photoset_id="+$photoset+"&per_page="+$perPage+"&page="+$current_page+"&media=photos&format=json&jsoncallback=?"
+  var fURL = "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key="+$apiKey+"&photoset_id="+$photoset+"&per_page="+$perPage+"&page="+$current_page+"&media=photos&format=json&jsoncallback=?"
 
   $.getJSON(fURL, displayImages);
 
