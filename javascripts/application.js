@@ -95,8 +95,6 @@ function getPhotoset() {
         $('.photo-'+ $page).show();
         $container.masonry({
           itemSelector: '.photo',
-          columnWidth: '.grid-sizer',
-          percentPosition: true,
         });
 
       });
