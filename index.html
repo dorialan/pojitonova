@@ -9,6 +9,7 @@
   <link rel="shortcut icon" href="favicon.ico" />
   <script src="/javascripts/jquery.1.8.2.min.js"></script>
   <script src="/javascripts/masonry.js"></script>
+  <!-- <script src="https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script> -->
   <script src="/javascripts/lightbox.js"></script>
   <script src="/javascripts/application.js"></script>
   <script>
@@ -30,8 +31,9 @@
           <div class="left">
             <a href="comments" class="testimonial-link mobile-off">
               Отзывы клиентов<span class="pums-pums"></span></a>
-            <a href="./" class="logo mobile-on"></a>
-            <ul class="mobile-on">
+            <a href="#" class="mobile-on mobile-navigation"></a>
+
+            <ul class="mobile-on mobile-navigation">
               <li class="photoset" id="72157634326612852"><a href="?72157634326612852">Портрет</a></li>
               <li class="photoset" id="72157634319585569"><a href="?72157634319585569">Детки</a></li>
               <li class="photoset" id="72157634865788304"><a href="?72157634865788304">Беремушки</a></li>
@@ -41,13 +43,13 @@
               <li><a href="comments">Отзывы клиентов</a></li>
             </ul>
           </div>
+          <a href="./" class="logo-mid mobile-on"></a>
           <div class="social-links">
             <span class="tits-tits"></span>
             <a href="http://www.flickr.com/photos/pojitonova/" target="_blank" class="flickr-link"></a>
             <a href="https://www.facebook.com/pojitonova.photo" target="_blank" class="facebook-link"></a>
             <a href="http://vk.com/pojitonova" target="_blank" class="vk-link"></a>
           </div>
-
         </div>
         <a href="./" class="logo mobile-off"></a>
 
@@ -65,8 +67,10 @@
     </div>
     <div class="body">
       <div class="inner">
-        <center><div id="gallery" class="row"></center>
-
+        <center>
+          <div id="gallery" class="row grid">
+          </div>
+          </center>
         </div>
       </div>
       <div style="clear:both"></div>
