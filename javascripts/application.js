@@ -7,23 +7,23 @@ var $pages = 2
 var $photosets = ["72157634865788304", "72157634324909907", "72157634326612852", "72157634319585569"]
 var $photoset = "72157634326612852"
 
-$(document).ready(function(){		
+$(document).ready(function(){
   if (location.search) {
       var parts = location.search.substring(1).split('?');
       $photoset = parts[0];
-  } 
-  
+  }
+
   if ($("a.current").length == 0) {
     $("li#" + $photoset + " a").addClass("current");
     getPhotoset();
   }
-  
+
 });
 
 $(function(){
   // Mobile navigation expander
-  $(".mobile-navigation .current").click(function(e){
-    e.preventDefault();
+  $(".mobile-navigation").click(function(e){
+    // e.preventDefault();
     $(".mobile-navigation").toggleClass("expanded");
   });
 
@@ -53,35 +53,35 @@ function getPhotoset() {
 
   $.getJSON(fURL, displayImages);
 
-  	function displayImages(data) {			
-      	
-      $current_page++;																											   
+  	function displayImages(data) {
+
+      $current_page++;
       var photoset = data.photoset
-      var htmlString = ""; 
+      var htmlString = "";
       $page = parseInt(photoset.page)
       $pages = parseInt(photoset.pages)
-    
-  
+
+
       // Now start cycling through our array of Flickr photo details
       $.each(photoset.photo, function(i, ph){
-                            
-        var sourceMedium = "http://farm"+ph.farm+".staticflickr.com/"+ph.server+"/"+ph.id+"_"+ph.secret+".jpg"      
-        var sourceLarge = "http://farm"+ph.farm+".staticflickr.com/"+ph.server+"/"+ph.id+"_"+ph.secret+"_c.jpg"   
+
+        var sourceMedium = "http://farm"+ph.farm+".staticflickr.com/"+ph.server+"/"+ph.id+"_"+ph.secret+".jpg"
+        var sourceLarge = "http://farm"+ph.farm+".staticflickr.com/"+ph.server+"/"+ph.id+"_"+ph.secret+"_c.jpg"
 
         htmlString += '<div class="photo photo-'+ $page +' style="display:none;"><a href="' + sourceLarge + '" rel="lightbox[set]">';
         htmlString += '<img src="' + sourceMedium + '" alt="' + ph.title + '" title="' + ph.title + '"/>';
         htmlString += '</a></div>';
-      });        
-    
-    
+      });
+
+
     $checkScroll = true;
-  
+
     var $container = $('#gallery');
-    
+
     if ($page > 1) {
       $photos = $(htmlString);
       $container.append($photos);
-      
+
       $container.imagesLoaded(function(){
         $('#loading').hide();
         $('.photo-'+ $page).show();
@@ -94,12 +94,12 @@ function getPhotoset() {
         $('#loading').hide();
         $('.photo-'+ $page).show();
         $container.masonry({
-          itemSelector : '.photo',
+          itemSelector: '.photo',
         });
-      
+
       });
     }
-    
+
 	// Close down the JSON function call
 	}
 }
